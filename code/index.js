@@ -4,6 +4,10 @@ const rout=require("./rutas");
 const path=require("path");
 // application
 const app = express();
+//static archives
+
+app.use(express.static("public"));
+
 //habilitar
 app.set("view engine","pug");
 app.set("views",path.join(__dirname,"./views"))
